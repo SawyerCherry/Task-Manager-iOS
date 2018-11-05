@@ -85,7 +85,7 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         let taskForIndex = TaskManager.sharedInstance.getTask(at: indexPath.row)
         
-        let title = taskForIndex.completed ? "Check Complete" : "Check Incomplete"
+        let title = !taskForIndex.completed ? "Check Complete" : "Check Incomplete"
         
         let checkComOrIncomAction = UITableViewRowAction(style: .normal, title: title) { _, _ in
             
