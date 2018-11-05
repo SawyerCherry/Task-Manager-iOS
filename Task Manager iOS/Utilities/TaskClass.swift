@@ -11,7 +11,7 @@ import RealmSwift
 
 
 class Task: Object {
-    
+    // Had to change these to abide the law of realm
     @objc dynamic var taskTitle: String = ""
     @objc dynamic var completed: Bool = true
     @objc dynamic var taskRating: String = ""

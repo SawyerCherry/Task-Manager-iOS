@@ -9,7 +9,7 @@
 import UIKit
 
 class TaskTableViewCell: UITableViewCell {
-    
+    // these are inside of the cell.
     @IBOutlet weak var taskTitleLabel: UILabel!
     @IBOutlet weak var priorityLabel: UILabel!
     @IBOutlet weak var dueDateLabel: UILabel!

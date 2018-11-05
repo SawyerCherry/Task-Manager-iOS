@@ -30,7 +30,7 @@ class AddTaskViewController: UIViewController {
         self.view.endEditing(true)
     }
     @IBAction func submitButtonTapped(_ sender: Any) {
-       
+       // putting down the taskTitle and taskDescription
         guard let title = taskTitleTextField.text, title.trimmingCharacters(in: .whitespacesAndNewlines) != ""
             else {
                 return
@@ -38,7 +38,7 @@ class AddTaskViewController: UIViewController {
         guard let description = descriptionTextField.text, description.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
             return
         }
-
+// this is the switch statement for our different properties
         var priority: String!
         switch prioritySegmentedController.selectedSegmentIndex {
         case 0:
@@ -54,7 +54,7 @@ class AddTaskViewController: UIViewController {
         default:
             priority = "First"
         }
-
+// this is the new task that will be created in the cell and its properties
        let newTask = Task()
       
         newTask.taskTitle = title
@@ -62,7 +62,6 @@ class AddTaskViewController: UIViewController {
         newTask.completed = false
         newTask.priority = priority
         newTask.dueDate = dueDatePicker.date
-    
     
         TaskManager.sharedInstance.addTask(task: newTask)
         
